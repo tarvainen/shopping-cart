@@ -33,7 +33,7 @@ namespace ShoppingCart.Events
 
             if (!_store.TryGetValue(aggregateId, out events))
             {
-                throw new ArgumentException("No events found for aggregate");
+                throw new ArgumentException($"No events found for aggregate '{aggregateId}'");
             }
 
             return events;
